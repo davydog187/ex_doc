@@ -13,13 +13,16 @@ defmodule ExDoc.Autolink do
   # * `:ext` - the extension (`".html"`, "`.xhtml"`, etc)
   #
   # * `:skip_undefined_reference_warnings_on` - list of modules to skip the warning on
+  #
+  # * `:language` - module implementing `ExDoc.Language` behaviour
   defstruct [
     :app,
     :current_module,
     :module_id,
     :id,
     ext: ".html",
-    skip_undefined_reference_warnings_on: []
+    skip_undefined_reference_warnings_on: [],
+    language: ExDoc.Language.Elixir
   ]
 
   alias ExDoc.Formatter.HTML

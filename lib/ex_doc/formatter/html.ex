@@ -72,7 +72,9 @@ defmodule ExDoc.Formatter.HTML do
         current_module: node.module,
         ext: ext,
         skip_undefined_reference_warnings_on: config.skip_undefined_reference_warnings_on,
-        module_id: node.id
+        module_id: node.id,
+        # TODO: don't hardcode here, get from the chunk instead!
+        language: node.language
       ]
 
       docs =
