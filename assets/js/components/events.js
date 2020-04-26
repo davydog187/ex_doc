@@ -4,11 +4,10 @@
 // ------------
 
 import $ from 'jquery'
-import * as autocomplete from './autocomplete/display'
-import {search} from './search'
+import * as autocomplete from '../autocomplete/display'
 import * as helpers from './helpers'
 
-import sidebarItemsTemplate from './templates/sidebar-items.handlebars'
+import sidebarItemsTemplate from '../templates/sidebar-items.handlebars'
 
 // Constants
 // ---------
@@ -156,7 +155,8 @@ function addEventListeners () {
 
   var pathname = window.location.pathname
   if (pathname.substr(pathname.lastIndexOf('/') + 1) === 'search.html') {
-    search(getParameterByName('q'))
+    import(/* webpackChunkName: "search" */ './search')
+      .then(module => module.search(getParameterByName('q')));
   }
 }
 

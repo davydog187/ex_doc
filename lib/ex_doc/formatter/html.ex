@@ -213,7 +213,9 @@ defmodule ExDoc.Formatter.HTML do
   Generate assets from configs with the given default assets.
   """
   def generate_assets(config, assets_dir, defaults) do
-    write_default_assets(config, defaults) ++ copy_assets(config, assets_dir)
+    IO.inspect(write_default_assets(config, defaults) ++ copy_assets(config, assets_dir),
+      label: "assets"
+    )
   end
 
   defp copy_assets(config, assets_dir) do

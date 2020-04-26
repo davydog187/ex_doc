@@ -8,7 +8,7 @@
 
 import $ from 'jquery'
 import lunr from 'lunr'
-import resultsTemplate from './templates/search-results.handlebars'
+import resultsTemplate from '../templates/search-results.handlebars'
 
 // Local Variables
 // ---------------

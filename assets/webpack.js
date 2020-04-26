@@ -15,13 +15,14 @@ const cleanOptions = {
 }
 
 function buildFilename(name, extension) {
+  console.log("name", name, "extension", extension);
   name = name.split("-")
-  folder = name[0]
+  folder = name[0]         
   file = name[1]
   return folder + '/dist/' + file + '-[contenthash]' + extension
 }
 
-module.exports = {
+module.exports = {         
   mode: 'production',
   entry: {
     "epub-app": './js/epub.js',
@@ -33,12 +34,16 @@ module.exports = {
   },
   output: {
     path: resolve(__dirname, '../formatters'),
-    filename: (chunkData) => buildFilename(chunkData.chunk.name, '.js')
+    chunkFilename: '[name]-[contenthash].chunk.js',
+    filename: '[name]-[contenthash].js'
   },
   resolve: {
-    extensions: ['.js', '.less']
+    extensions: ['.js']    
   },
   optimization: {
+    splitChunks:{
+      chunks: 'all'
+    },    
     minimizer: [
       new UglifyJSPlugin({
         cache: true,
@@ -64,7 +69,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
+            presets: [["@babel/preset-env", {"useBuiltIns": "entry"}]],
+            plugins: ["@babel/plugin-syntax-dynamic-import"],
             cacheDirectory: true
           }
         }

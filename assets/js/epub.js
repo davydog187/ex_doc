@@ -1,6 +1,5 @@
 // Dependencies
 // ------------
-
 import hljs from 'highlight.js/lib/highlight'
 import bash from 'highlight.js/lib/languages/bash'
 import css from 'highlight.js/lib/languages/css'
@@ -14,7 +13,7 @@ import markdown from 'highlight.js/lib/languages/markdown'
 import sql from 'highlight.js/lib/languages/sql'
 import xml from 'highlight.js/lib/languages/xml'
 
-import {initialize as initMakeup} from './makeup'
+import {initialize as initMakeup} from './components/makeup'
 
 // Set up Highlight.js
 hljs.configure({

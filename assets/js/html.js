@@ -1,6 +1,5 @@
 // Dependencies
 // ------------
-
 import $ from 'jquery'
 import Handlebars from 'handlebars/runtime'
 
@@ -24,13 +23,13 @@ import groupChanged from './template-helpers/groupChanged'
 import nestingChanged from './template-helpers/nestingChanged'
 import showSummary from './template-helpers/showSummary'
 
-import {initialize as initEvents} from './events'
-import {initialize as initSidebar} from './sidebar'
-import {initialize as initVersions} from './versions'
-import {initialize as initNightMode} from './night'
-import {initialize as initMakeup} from './makeup'
-import {initialize as initKeyboardShortcuts} from './keyboard-shortcuts'
-import {initialize as initQuickSwitch} from './quick-switch'
+import {initialize as initEvents} from './components/events'
+import {initialize as initSidebar} from './components/sidebar'
+import {initialize as initVersions} from './components/versions'
+import {initialize as initNightMode} from './components/night'
+import {initialize as initMakeup} from './components/makeup'
+import {initialize as initKeyboardShortcuts} from './components/keyboard-shortcuts'
+import {initialize as initQuickSwitch} from './components/quick-switch'
 import {initialize as initTooltips} from './tooltips/tooltips'
 import {initialize as initHintsPage} from './tooltips/hints-page'
 

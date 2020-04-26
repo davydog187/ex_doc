@@ -6,7 +6,7 @@ import find from 'lodash.find'
 import {focusSearchInput, openSidebar, toggleSidebar} from './sidebar'
 import {toggleNightMode} from './night'
 import {openQuickSwitchModal} from './quick-switch'
-import helpModalTemplate from './templates/keyboard-shortcuts-help-modal.handlebars'
+import helpModalTemplate from '../templates/keyboard-shortcuts-help-modal.handlebars'
 
 // Constants
 // ---------

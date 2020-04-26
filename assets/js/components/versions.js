@@ -5,7 +5,7 @@
 // ------------
 import $ from 'jquery'
 import find from 'lodash.find'
-import versionsTemplate from './templates/versions-dropdown.handlebars'
+import versionsTemplate from '../templates/versions-dropdown.handlebars'
 
 // Local Variables
 // ---------------

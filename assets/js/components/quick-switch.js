@@ -4,8 +4,8 @@
 // ------------
 
 import $ from 'jquery'
-import quickSwitchModalTemplate from './templates/quick-switch-modal.handlebars'
-import quickSwitchResultsTemplate from './templates/quick-switch-results.handlebars'
+import quickSwitchModalTemplate from '../templates/quick-switch-modal.handlebars'
+import quickSwitchResultsTemplate from '../templates/quick-switch-results.handlebars'
 
 // Constants
 // ---------

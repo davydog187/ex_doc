@@ -3,7 +3,7 @@
 // Dependencies
 // ------------
 
-import * as helpers from '../helpers'
+import * as helpers from '../components/helpers'
 
 // Constants
 // ---------
